@@ -1,0 +1,114 @@
+/* here you can put your own css to customize and override the theme */
+
+/***
+Rounded Portlets
+***/
+/*
+.portlet {
+	border-radius: 4px !important;
+}
+
+.portlet .portlet-title {
+	border-radius: 4px 4px 0px 0px !important;
+}
+
+.portlet .portlet-body,
+.portlet .portlet-body .form-actions  {
+	border-radius: 0px 0px 4px 4px !important;
+}
+*/
+.mt-5{
+	margin-top:5px !important;
+}
+.mt-10{
+	margin-top:10px !important;
+}
+.mt-15{
+	margin-top:15px !important;
+}
+.mt-20{
+	margin-top:20px !important;
+}
+.mt-25{
+	margin-top:25px !important;
+}
+.mt-30{
+	margin-top:30px !important;
+}
+.mt-35{
+	margin-top:35px !important;
+}
+.mt-40{
+	margin-top:40px !important;
+}
+.mt-45{
+	margin-top:45px !important;
+}
+.mt-50{
+	margin-top:50px !important;
+}
+
+
+.ml-5{
+	margin-left:5px !important;
+}
+.ml-10{
+	margin-left:10px !important;
+}
+.ml-15{
+	margin-left:15px !important;
+}
+.ml-20{
+	margin-left:20px !important;
+}
+.ml-25{
+	margin-left:25px !important;
+}
+.ml-30{
+	margin-left:30px !important;
+}
+.ml-35{
+	margin-left:35px !important;
+}
+.ml-40{
+	margin-left:40px !important;
+}
+.ml-45{
+	margin-left:45px !important;
+}
+.ml-50{
+	margin-left:50px !important;
+}
+
+
+.mr-5{
+	margin-right:5px !important;
+}
+.mr-10{
+	margin-right:10px !important;
+}
+.mr-15{
+	margin-right:15px !important;
+}
+.mr-20{
+	margin-right:20px !important;
+}
+.mr-25{
+	margin-right:25px !important;
+}
+.mr-30{
+	margin-right:30px !important;
+}
+.mr-35{
+	margin-right:35px !important;
+}
+.mr-40{
+	margin-right:40px !important;
+}
+.mr-45{
+	margin-right:45px !important;
+}
+.mr-50{
+	margin-right:50px !important;
+}
+

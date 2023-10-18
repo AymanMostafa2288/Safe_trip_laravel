@@ -1,0 +1,41 @@
+*{
+    box-sizing: border-box;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+.kanban{
+    display: flex;
+}
+
+.kanban-list{
+    min-width: 20em;
+    list-style: none;padding: 0 0 1em 0;display: inline-table;
+    border: 1px solid hsl(0, 100%, 1%);margin: .625em;overflow-y: visible;
+}
+
+.kanban-item-container{
+    padding: .5em;display: block;min-width: 100%;
+}
+
+.kanban-list-header{
+    padding: .625em 1em;
+    border-bottom: 1px solid #000;
+    text-align: center;
+    background-color: #d0a625;
+    color: white;
+}
+.kanban-list-header h4, .kanban-item h5{
+    padding: 0;margin: 0;
+}
+.kanban-item{
+    padding: .5em;
+    display: block;
+    min-width: 100%;
+    border: 1px solid #ffffff;
+    background-color: #ffffff;color: #000;
+}
+.portlet {
+    margin-bottom: 6px !important;
+}

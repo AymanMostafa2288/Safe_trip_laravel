@@ -1,0 +1,865 @@
+.header-contact-info {
+    padding-right: 0;
+    text-align: right;
+}
+.header-contact-info li {
+    margin-left: 20px;
+    margin-right: 0;
+}
+.header-contact-info li:last-child {
+    margin-left: 0;
+}
+.header-contact-info li i {
+    margin-left: 4px;
+    margin-right: 0;
+}
+.header-right-content {
+    text-align: left;
+}
+.header-right-content .lang-select {
+    margin-right: 15px;
+    margin-left: 0;
+}
+.header-right-content .top-header-social {
+    padding-right: 0;
+}
+.header-right-content .top-header-social li {
+    margin-left: 4px;
+    margin-right: 0;
+}
+.header-right-content .top-header-social li:last-child {
+    margin-left: 0;
+}
+.header-right-content .lang-select .nice-select {
+    padding: 8px 15px 8px 30px;
+}
+.fovia-nav .navbar .others-options .btn {
+    margin-right: 15px;
+    margin-left: 0;
+}
+.fovia-nav .navbar .others-options .option-item {
+    margin-right: 15px;
+    margin-left: 0;
+}
+.fovia-nav .navbar .navbar-nav .nav-item:first-child a {
+    margin-right: 0;
+    margin-left: 15px;
+}
+.fovia-nav .navbar .navbar-nav .nav-item:last-child a {
+    margin-left: 0;
+    margin-right: 15px;
+}
+.fovia-nav .navbar ul {
+    padding-right: 0;
+}
+.navbar-brand {
+    margin-right: 0;
+}
+.fovia-nav .navbar .navbar-nav .nav-item .dropdown-menu {
+    right: 0;
+    left: auto;
+    text-align: right;
+}
+.main-banner-content {
+    text-align: left;
+    direction: ltr;
+}
+.main-banner-content .btn-box .btn-light {
+    margin-right: 12px;
+    margin-left: 0;
+}
+.circle-shape1 {
+    right: 80px;
+    left: auto;
+}
+.circle-shape2 {
+    right: 0;
+    left: auto;
+}
+.shape1 {
+    left: 25px;
+    right: auto;
+}
+.main-services-box {
+    text-align: right;
+}
+.shape2 {
+    left: 0;
+    right: auto;
+}
+.main-services-box::before {
+    right: 0;
+    left: auto;
+}
+.main-services-box h3::before {
+    right: 0;
+    left: auto;
+}
+.about-content {
+    padding-right: 50px;
+    text-align: right;
+    padding-left: 0;
+}
+.about-content ul {
+    padding-right: 0;
+}
+.about-content ul li {
+    padding-right: 34px;
+    padding-left: 0;
+}
+.about-content ul li i {
+    right: 0;
+    left: auto;
+}
+.our-mission-content {
+    margin-right: auto;
+    margin-left: 0;
+    padding-left: 50px;
+    padding-right: 0;
+    text-align: right;
+}
+.our-mission-content ul {
+    padding-right: 0;
+}
+.single-fun-facts h3 {
+    padding-right: 5px;
+    padding-left: 0;
+}
+.single-fun-facts h3 .optional-icon {
+    left: 5px;
+    right: auto;
+}
+.single-services-box {
+    text-align: right;
+}
+.single-doctor-box .doctor-content .social {
+    padding-right: 0;
+}
+.appointment-content form .form-group {
+    padding-right: 55px;
+    padding-left: 0;
+    text-align: right;
+}
+.appointment-content {
+    text-align: right;
+}
+.appointment-content form .form-group .icon {
+    right: 0;
+    left: auto;
+}
+.appointment-content form .form-group .nice-select {
+    padding: 0 0 8px 35px;
+}
+.nice-select {
+    text-align: right !important;
+}
+.nice-select:after {
+    left: 12px !important;
+    right: auto !important;
+}
+.appointment-content form .form-group .nice-select .list .option {
+    text-align: right;
+}
+.slick-slide {
+    float: right;
+}
+.faq-accordion {
+    padding-right: 50px;
+    padding-left: 0;
+    text-align: right;
+}
+.faq-accordion .accordion .accordion-title {
+    padding: 12px 50px 12px 20px;
+}
+.faq-accordion .accordion .accordion-title i {
+    right: 0;
+    left: auto;
+}
+.partner-item:nth-child(6) {
+    margin-right: 10%;
+    margin-left: 0;
+}
+.partner-item:nth-child(6) {
+    margin-right: 10%;
+    margin-left: 0;
+}
+.faq-accordion .accordion {
+    padding-right: 0;
+}
+.single-blog-post .post-content {
+    text-align: right;
+}
+.single-blog-post .post-content .post-meta ul {
+    padding-right: 0;
+}
+.single-blog-post .post-content .post-meta ul li {
+    margin-left: 15px;
+    margin-right: 0;
+}
+.single-blog-post .post-content .post-meta ul li:last-child {
+    margin-left: 0;
+}
+.single-blog-post .post-content .post-meta ul li::before {
+    left: -11px;
+    right: auto;
+}
+.single-product-box .product-image {
+    text-align: right;
+}
+.newsletter-form button {
+    left: 7.5px;
+    right: auto;
+}
+.newsletter-form .input-newsletter {
+    padding-right: 25px;
+    padding-left: 0;
+    text-align: right;
+}
+.newsletter-content {
+    text-align: right;
+}
+.single-footer-widget {
+    text-align: center;
+}
+.single-footer-widget .departments-list {
+    padding-right: 0;
+}
+.single-footer-widget .links-list {
+    padding-right: 0;
+}
+.pl-5, .px-5 {
+    padding-right: 3rem !important;
+    padding-left: 0 !important;
+}
+.single-footer-widget .opening-hours {
+    padding-right: 0;
+}
+.single-footer-widget .opening-hours li span {
+    float: left;
+}
+.single-footer-widget .social {
+    padding-right: 0;
+}
+.go-top {
+    left: 15px;
+    right: auto;
+}
+.search-overlay.search-popup {
+    left: 0;
+    right: auto;
+}
+.search-overlay.search-popup .search-form .search-button {
+    left: 0;
+    right: auto;
+}
+.search-overlay.search-popup .search-form .search-input {
+    padding-right: 10px;
+    padding-left: 0;
+}
+.page-title-content ul {
+    padding-right: 0;
+}
+.page-title-content ul li::before {
+    left: -13px;
+    right: auto;
+}
+.widget-area .widget_search form button {
+    left: 0;
+    right: auto;
+}
+.widget-area .widget .widget-title {
+    text-align: right;
+}
+.widget-area .widget .widget-title::before {
+    right: 0;
+    left: auto;
+}
+.widget-area .widget_services_list ul {
+    padding-right: 0;
+}
+.widget-area .widget_download ul {
+    padding-right: 0;
+}
+.widget-area .widget_appointment form .form-group {
+    padding-right: 45px;
+    padding-left: 0;
+    text-align: right;
+}
+.widget-area .widget_appointment form .form-group .icon {
+    right: 0;
+    left: auto;
+}
+.widget-area .widget_appointment form .form-group .nice-select {
+    padding: 0 0 8px 35px;
+}
+.widget-area .widget_appointment form .form-group .nice-select .list .option {
+    text-align: right;
+}
+.widget-area .widget_services_list ul li a::before {
+    right: 0;
+    left: auto;
+}
+.widget-area .widget_services_list ul li a {
+    text-align: right;
+    padding-right: 15px;
+    padding-left: 35px;
+}
+.widget-area .widget_services_list ul li a i {
+    left: 15px;
+    right: auto;
+}
+.widget-area .widget_services_list ul li a.active, .widget-area .widget_services_list ul li a:hover {
+    padding-right: 20px;
+    padding-left: 0;
+}
+.widget-area .widget_download ul li a {
+    padding-right: 15px;
+    padding-left: 35px;
+    text-align: right;
+}
+.widget-area .widget_download ul li a i {
+    left: 15px;
+    right: auto;
+}
+.widget-area .widget_download ul li a::before {
+    right: 0;
+    left: auto;
+}
+.widget-area .widget_download ul li a.active, .widget-area .widget_download ul li a:hover {
+    padding-right: 20px;
+    padding-left: 0;
+}
+.services-details-desc {
+    text-align: right;
+}
+.services-details-desc .services-features-list {
+    padding-right: 0;
+}
+.services-details-desc .services-features-list li {
+    padding-right: 34px;
+    padding-left: 0;
+}
+.services-details-desc .services-features-list li i {
+    right: 0;
+    left: auto;
+}
+.services-details-desc .wp-block-gallery.columns-3 {
+    padding-right: 0;
+}
+.doctor-details-image .social {
+    padding-right: 0;
+}
+.doctor-details-desc {
+    padding-right: 20px;
+    text-align: right;
+    padding-left: 0;
+}
+.education-desc {
+    text-align: right;
+}
+.education-desc ul {
+    padding-right: 0;
+}
+.skill-desc {
+    text-align: right;
+}
+.skill-desc ul {
+    padding-right: 0;
+}
+.skill-desc ul li span {
+    padding-right: 34px;
+    padding-left: 0;
+}
+.skill-desc ul li span i {
+    right: 0;
+    left: auto;
+}
+.shape3 {
+    right: 0;
+    left: auto;
+}
+.woocommerce-topbar .woocommerce-topbar-ordering .nice-select {
+    padding: 15px 20px 15px 35px;
+}
+.woocommerce-topbar .woocommerce-topbar-ordering .nice-select .list .option {
+    text-align: right;
+}
+.woocommerce-result-count {
+    text-align: right;
+}
+.single-product-box .product-image .sale-btn {
+    right: 20px;
+    left: auto;
+}
+.single-product-box .product-image .add-to-cart-btn i {
+    left: 20px;
+    right: auto;
+}
+.single-product-box .product-content {
+    text-align: right;
+}
+.product-details-desc {
+    text-align: right;
+}
+.product-details-desc .buy-checkbox-btn .cbx span:last-child {
+    padding-right: 4px;
+    padding-left: 0;
+}
+.product-details-desc .product-add-to-cart .input-counter {
+    margin-left: 10px;
+    margin-right: 0;
+}
+.product-details-desc .product-review .rating {
+    padding-left: 5px;
+    padding-right: 0;
+}
+.products-details-tab .tabs {
+    padding-right: 0;
+    text-align: right;
+}
+.products-details-tab .tabs li {
+    margin-left: 5px;
+    margin-right: 0;
+}
+.products-details-tab .tab_content {
+    text-align: right;
+}
+.products-details-tab .tab_content .tabs_item .products-details-tab-content .additional-information {
+    padding-right: 0;
+}
+.products-details-tab .tab_content .tabs_item .products-details-tab-content .additional-information li {
+    text-align: right;
+}
+.products-details-tab .tab_content .tabs_item .products-details-tab-content .product-review-form .review-comments .review-item {
+    padding-left: 200px;
+    padding-right: 0;
+}
+.products-details-tab .tab_content .tabs_item .products-details-tab-content .product-review-form .review-comments .review-item .review-report-link {
+    left: 0;
+    right: auto;
+}
+.products-details-tab .tab_content .tabs_item .products-details-tab-content .product-review-form .review-title .btn {
+    left: 0;
+    right: auto;
+}
+.products-details-tab .tab_content .tabs_item .products-details-tab-content .product-review-form .review-title p {
+    padding-right: 5px;
+    padding-left: 0;
+}
+.cart-area {
+    text-align: right;
+}
+.cart-table table tbody tr td.product-subtotal .remove {
+    float: left;
+}
+.text-right {
+    text-align: left !important;
+}
+.cart-buttons .shopping-coupon-code button {
+    left: 0;
+    right: auto;
+}
+.cart-totals ul li span {
+    float: left;
+}
+.cart-totals {
+    margin-right: auto;
+    margin-left: 0;
+}
+.checkout-area {
+    text-align: right;
+}
+.billing-details .form-group .nice-select .list .option {
+    text-align: right;
+}
+.order-details .title::before {
+    right: 0;
+    left: auto;
+}
+.billing-details .title::before {
+    right: 0;
+    left: auto;
+}
+.order-details .payment-box .payment-method p [type="radio"]:checked + label, .order-details .payment-box .payment-method p [type="radio"]:not(:checked) + label {
+    padding-right: 27px;
+    padding-left: 0;
+}
+.order-details .payment-box .payment-method p [type="radio"]:checked + label::before, .order-details .payment-box .payment-method p [type="radio"]:not(:checked) + label::before {
+    right: 0;
+    left: auto;
+}
+.order-details .payment-box .payment-method p [type="radio"]:checked + label::after, .order-details .payment-box .payment-method p [type="radio"]:not(:checked) + label::after {
+    right: 3px;
+    left: auto;
+}
+.widget-area .widget_fovia_posts_thumb {
+    text-align: right;
+}
+.widget-area .widget_fovia_posts_thumb .item .thumb {
+    float: right;
+    margin-left: 15px;
+    margin-right: 0;
+}
+.widget-area .widget {
+    text-align: right;
+}
+.widget-area .widget_recent_comments ul li {
+    padding-right: 17px;
+    padding-left: 0;
+}
+.widget-area .widget_recent_comments ul li::before {
+    right: 0;
+    left: auto;
+}
+.widget-area .widget_archive ul li {
+    padding-right: 17px;
+    padding-left: 0;
+}
+.widget-area .widget_archive ul li::before {
+    right: 0;
+    left: auto;
+}
+.widget-area .widget_categories ul li {
+    padding-right: 17px;
+    padding-left: 0;
+}
+.widget-area .widget_categories ul li::before {
+    right: 0;
+    left: auto;
+}
+.widget-area .widget_meta ul li {
+    padding-right: 17px;
+    padding-left: 0;
+}
+.widget-area .widget_meta ul li::before {
+    right: 0;
+    left: auto;
+}
+.blog-details-desc {
+    text-align: right;
+}
+.blog-details-desc .article-content .entry-meta ul {
+    padding-right: 0;
+}
+.blog-details-desc .article-content .entry-meta ul li {
+    margin-left: 21px;
+    margin-right: 0;
+}
+.blog-details-desc .article-content .entry-meta ul li:last-child {
+    margin-left: 0;
+}
+.blog-details-desc .article-content .entry-meta ul li::before {
+    left: -15px;
+    right: auto;
+}
+blockquote::before, .blockquote::before {
+    right: 50px;
+    left: auto;
+}
+blockquote::after, .blockquote::after {
+    right: 0;
+    left: auto;
+}
+.blog-details-desc .article-content .wp-block-gallery.columns-3 {
+    padding-right: 0;
+}
+.blog-details-desc .article-content .features-list {
+    padding-right: 0;
+}
+.blog-details-desc .article-content .features-list li {
+    padding-right: 34px;
+    padding-left: 0;
+}
+.blog-details-desc .article-content .features-list li i {
+    right: 0;
+    left: auto;
+}
+.blog-details-desc .article-footer .article-tags span {
+    margin-left: 5px;
+    margin-right: 0;
+}
+.blog-details-desc .article-footer .article-share .social {
+    padding-right: 0;
+    text-align: left;
+}
+.post-navigation .navigation-links .nav-next {
+    text-align: left;
+}
+.comments-area .comments-title::before {
+    right: -25px;
+    left: auto;
+}
+.comments-area .comment-body {
+    padding-right: 65px;
+    padding-left: 0;
+}
+.comments-area .comment-author .avatar {
+    right: -65px;
+    left: auto;
+}
+.comments-area .children {
+    margin-right: 20px;
+    margin-left: 0;
+}
+.comments-area .comment-respond .comment-reply-title::before {
+    right: -25px;
+    left: auto;
+}
+.comments-area .comment-respond .comment-form-cookies-consent {
+    padding-right: 20px;
+    padding-left: 0;
+}
+.comments-area .comment-respond .comment-form-cookies-consent input {
+    right: 0;
+    left: auto;
+}
+.approach-content {
+    margin-right: auto;
+    margin-left: 0;
+    padding-left: 50px;
+    padding-right: 0;
+    text-align: right;
+}
+.approach-content ul {
+    padding-right: 0;
+}
+.approach-content ul li {
+    padding-right: 34px;
+    padding-left: 0;
+}
+.approach-content ul li i {
+    right: 0;
+    left: auto;
+}
+.single-vision-box {
+    text-align: right;
+}
+.single-vision-box::before {
+    right: 0;
+    left: auto;
+}
+.list-unstyled {
+    padding-right: 0;
+    text-align: right;
+}
+.contact-info ul {
+    padding-right: 0;
+}
+.contact-info ul li {
+    padding-right: 95px;
+    padding-left: 0;
+    text-align: right;
+}
+.contact-info ul li .icon {
+    right: 0;
+    left: auto;
+}
+.products-details-tab .tab_content .tabs_item .products-details-tab-content .product-review-form .review-comments .review-item {
+    padding-left: 0 !important;
+}
+.form-check .form-check-input {
+    float: right;
+    margin-right: -1.5em;
+    margin-left: 0;
+}
+.form-check {
+    padding-right: 1.5em;
+    padding-left: 0;
+}
+
+/* RTL responsive css*/
+@media only screen and (max-width: 767px) {
+    .mean-container a.meanmenu-reveal {
+        left: 5px !important;
+        right: auto !important;
+    }
+    .fovia-responsive-nav .logo {
+        text-align: right;
+    }
+    .fovia-responsive-nav .others-options {
+        left: 55px;
+        right: auto;
+    }
+    .mean-container .mean-nav ul li a.mean-expand {
+        width: 90%;
+    }
+    .main-services-box h3::before {
+        left: 0;
+    }
+    .about-content {
+        padding-right: 0;
+    }
+    .about-content ul li {
+        text-align: right;
+    }
+    .fadeInLeft {
+        -webkit-animation-name: unset;
+        animation-name: unset;
+    }
+    .our-mission-content {
+        padding-left: 0;
+    }
+    .single-fun-facts h3 .optional-icon {
+        left: 4px !important;
+        right: auto !important;
+    }
+    .appointment-content form .form-group {
+        padding-right: 41px !important;
+        padding-left: 0 !important;
+        text-align: right !important;
+    }
+    .faq-accordion {
+        padding-right: 0;
+    }
+    .faq-accordion .accordion .accordion-title {
+        text-align: right;
+    }
+    .faq-accordion .accordion .accordion-content {
+        text-align: right;
+    }
+    .partner-item:nth-child(6) {
+        margin-right: 0;
+    }
+    .single-blog-post .post-content .post-meta ul li {
+        margin-left: 10px !important;
+        margin-right: 0 !important;
+    }
+    .single-blog-post .post-content .post-meta ul li::before {
+        left: -8px !important;
+        right: auto !important;
+    }
+    .newsletter-form .input-newsletter {
+        padding-left: 0 !important;
+        padding-right: 15px !important;
+    }
+    .single-footer-widget.pl-5 {
+        padding-right: 0 !important;
+    }
+    .skill-desc ul li span {
+        padding-right: 25px !important;
+        text-align: right;
+        padding-left: 0 !important;
+    }
+    .comments-area .children {
+        margin-right: 10px !important;
+        margin-left: 0 !important;
+    }
+    .approach-content {
+        padding-left: 0 !important;
+    }
+    .approach-content ul li {
+        text-align: right;
+    }
+    .contact-info ul li {
+        padding-right: 82px !important;
+        padding-left: 0 !important;
+    }
+    .mean-container .mean-nav ul li a {
+        text-align: right;
+    }
+    .mean-container .mean-nav ul li a.mean-expand {
+        text-align: left;
+        left: 0;
+        right: auto;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .fovia-responsive-nav .others-options .option-item {
+        margin-right: 15px;
+        margin-left: 0;
+    }
+    .about-content ul li {
+        padding-left: 0 !important;
+        padding-right: 30px !important;
+    }
+    .newsletter-form .input-newsletter {
+        padding-left: 25px !important;
+        padding-right:0 !important;
+        text-align: left;
+    }
+    .approach-content ul li {
+        padding-left: 0 !important;
+        padding-right: 30px !important;
+    }
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+    .mean-container a.meanmenu-reveal {
+        left: 5px !important;
+        right: auto !important;
+    }
+    .fovia-responsive-nav .logo {
+        text-align: right;
+    }
+    .fovia-responsive-nav .others-options {
+        left: 55px;
+        right: auto;
+    }
+    .mean-container .mean-nav ul li a.mean-expand {
+        width: 90%;
+    }
+    .fovia-responsive-nav .others-options .option-item {
+        margin-right: 15px;
+        margin-left: 0;
+    }
+    .about-content {
+        padding-right: 0;
+    }
+    .fadeInLeft {
+        -webkit-animation-name: unset;
+        animation-name: unset;
+    }
+    .faq-accordion {
+        padding-right: 0;
+    }
+    .single-footer-widget.pl-5 {
+        padding-right: 0 !important;
+    }
+    .skill-desc ul li span {
+        text-align: right;
+    }
+    .education-desc ul {
+        text-align: right !important;
+    }
+    .mean-container .mean-nav ul li a {
+        text-align: right;
+    }
+    .mean-container .mean-nav ul li a.mean-expand {
+        text-align: left;
+        left: 0;
+        right: auto;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+
+    .header-contact-info li {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    .about-content {
+        padding-right: 30px !important;
+        padding-left: 0 !important;
+    }
+    .our-mission-content {
+        padding-left: 30px !important;
+        padding-right: 0 !important;
+    }
+    .faq-accordion {
+        padding-right: 30px;
+        padding-left: 0;
+    }
+    .approach-content {
+        padding-left: 30px !important;
+        padding-right: 0 !important;
+    }
+    .fovia-nav .navbar .navbar-nav .nav-item .dropdown-menu {
+        right: -35px;
+    }
+    .fovia-nav .navbar .navbar-nav .nav-item .dropdown-menu {
+        width: 275px;
+    }
+}

@@ -1,0 +1,25 @@
+<?php
+return[
+"Your Record Created Successfully"=>"Your Record Created Successfully",
+"Database updated!"=>"Database updated!",
+"Your Table Created Successfully"=>"Your Table Created Successfully",
+"Your Record Saved Successfully"=>"Your Record Saved Successfully",
+"The code field is required."=>"The code field is required.",
+"The title field is required."=>"The title field is required.",
+"Your Record Edited Successfully"=>"Your Record Edited Successfully",
+"The status field is required."=>"The status field is required.",
+"Please Check Your Request"=>"Please Check Your Request",
+"The invoice date field is required."=>"The invoice date field is required.",
+"The customer id field is required."=>"The customer id field is required.",
+"The selected invoice_animal_details.animal_code.0 is invalid."=>"The selected invoice_animal_details.animal_code.0 is invalid.",
+"Please Check Your Invouce Details"=>"Please Check Your Invouce Details",
+"The invoice_animal_details.animal_code.1 field is required."=>"The invoice_animal_details.animal_code.1 field is required.",
+"The selected invoice_animal_details.animal_code.2 is invalid."=>"The selected invoice_animal_details.animal_code.2 is invalid.",
+"The order has already been taken."=>"The order has already been taken.",
+"Your Record Deleted Successfully"=>"Your Record Deleted Successfully",
+"The image field is required."=>"The image field is required.",
+"The image must be an image."=>"The image must be an image.",
+"The image must be a file of type: png, jpg, jpeg."=>"The image must be a file of type: png, jpg, jpeg.",
+"Your Records Deleted Successfully"=>"Your Records Deleted Successfully",
+
+];
