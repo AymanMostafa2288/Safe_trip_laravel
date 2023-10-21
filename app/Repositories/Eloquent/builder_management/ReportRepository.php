@@ -213,6 +213,8 @@ class ReportRepository implements ReportInterface
             );
 
             foreach($result as $key=>$value){
+
+                $value[0] = str_replace('_', ' ',  $value[0]);
                 $join.=' '.$value[0].' '.$key.' on '.$value[1].' = '.$value[2];
             }
 
@@ -279,6 +281,7 @@ class ReportRepository implements ReportInterface
         if($limits){
             $query.=' Limit '.$limits;
         }
+
         return $query;
     }
     public function build_form($condtions=[],$addtional=[]){

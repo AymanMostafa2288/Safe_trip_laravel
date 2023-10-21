@@ -70,6 +70,14 @@ use App\Repositories\Eloquent\ticket_support_management\ContactUsRepository;
 
 //put Here singleton Path
 
+use App\Repositories\Interfaces\custom_modules_management\Subscriptions\SubscriptionInterface;
+use App\Repositories\Eloquent\custom_modules_management\Subscriptions\SubscriptionRepository;
+
+
+use App\Repositories\Interfaces\custom_modules_management\Trips\TripInterface;
+use App\Repositories\Eloquent\custom_modules_management\Trips\TripRepository;
+
+
 use App\Repositories\Interfaces\custom_modules_management\Packages\PackageInterface;
 use App\Repositories\Eloquent\custom_modules_management\Packages\PackageRepository;
 
@@ -155,6 +163,10 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->singleton(BoardsInterface::class, BoardsRepository::class);
 
 //put Here singleton
+
+$this->app->singleton(SubscriptionInterface::class, SubscriptionRepository::class);
+
+$this->app->singleton(TripInterface::class, TripRepository::class);
 
 $this->app->singleton(PackageInterface::class, PackageRepository::class);
 

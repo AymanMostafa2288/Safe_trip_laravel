@@ -39,19 +39,11 @@
             }
             if(new_record.find('.validate_area').length > 0){
                 new_record.find('.validate_area').each(function(){
-                    if($('.show').length == 1){
-                        var split_string = $(this).attr('id').split("_");
-                        var code_key = Object.keys(split_string).find(key => split_string[key] === 'validation') -1;
-                        var new_num = 0;
-                        split_string[code_key] = new_num;
-                        $(this).attr('id',split_string.join('_'));
-                    }else{
-                        var split_string = $(this).attr('id').split("_");
-                        var code_key = Object.keys(split_string).find(key => split_string[key] === 'validation') -1;
-                        var new_num = $('.show').length - 1;
-                        split_string[code_key] = new_num;
-                        $(this).attr('id',split_string.join('_'));
-                    }
+                    var split_string = $(this).attr('id').split("_");
+                    var code_key = Object.keys(split_string).find(key => split_string[key] === 'validation') -1;
+                    var new_num = $('.delete_element').length - 1;
+                    split_string[code_key] = new_num;
+                    $(this).attr('id',split_string.join('_'));
 
                 });
             }

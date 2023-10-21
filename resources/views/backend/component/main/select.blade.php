@@ -9,9 +9,6 @@
     @isset($title)
         <p  style=" font-size: 14px;color: #2b4a5c;font-weight: 600;margin-top: 15px">{{ appendToLanguage(getDashboardCurrantLanguage(),'globals',$title) }}</p>
     @endisset
-        @isset($validation_title)
-            <p style="color:red" id="{{ $validation_title }}_validation" class="validate_area" data-code="{{ $validation_num }}"><span class="label label-danger"></span></p>
-        @endisset
 @endisset
 
 <select class="form-control {{ @$class }}" data-placeholder="{{ appendToLanguage(getDashboardCurrantLanguage(),'globals',$placeholder) }}" name="{{ $name }}" tabindex="1"
@@ -50,6 +47,10 @@
             <label for="form_control_1">{{ appendToLanguage(getDashboardCurrantLanguage(),'globals',$title) }}</label>
         @endisset
             <p style="padding-top: 15px; color:red" id="{{ $name }}_validation"><span class="label label-danger"></span></p>
+    @else
+        @isset($validation_title)
+            <p style="color:red" id="{{ $validation_title }}_validation" data-code="{{ $validation_num }}" class="validate_area"><span class="label label-danger"></span></p>
+        @endisset
     @endif
 
 

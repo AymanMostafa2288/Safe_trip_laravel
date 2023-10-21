@@ -18,7 +18,6 @@ return new class extends Migration
             $table->foreign(['driver_id'])->references(['id'])->on('bus_workers')->onUpdate('NO ACTION')->onDelete('CASCADE');
             $table->foreign(['route_id'])->references(['id'])->on('bus_routes')->onUpdate('NO ACTION')->onDelete('CASCADE');
             $table->foreign(['supervisor_id'])->references(['id'])->on('bus_workers')->onUpdate('NO ACTION')->onDelete('CASCADE');
-            $table->foreign(['trip_id'])->references(['id'])->on('bus_trips')->onUpdate('NO ACTION')->onDelete('CASCADE');
         });
     }
 
@@ -34,7 +33,6 @@ return new class extends Migration
             $table->dropForeign('bus_trips_driver_id_foreign');
             $table->dropForeign('bus_trips_route_id_foreign');
             $table->dropForeign('bus_trips_supervisor_id_foreign');
-            $table->dropForeign('bus_trips_trip_id_foreign');
         });
     }
 };

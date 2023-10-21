@@ -16,6 +16,7 @@ class CounterRepository implements CounterInterface
         $this->model = $model;
     }
     public function data($request,$id='*',$field_name=''){
+
         if($id=='*'){
             $data=$this->model;
 

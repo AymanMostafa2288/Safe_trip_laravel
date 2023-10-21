@@ -67,11 +67,13 @@ class ReportController extends Controller
         $main_table=$data['table_db'];
         $joins=json_decode($data['db_joins'],true);
         $condtions=json_decode($data['db_condtions'],true);
+
         $selects=json_decode($data['db_select'],true);
         $orders=json_decode($data['report_order_by'],true);
         $addtional=json_decode($data['report_addtinal_filter'],true);
         $limits=$data['limit'];
         $groups_by=$data['group_by'];
+
         $query=$this->repository->build_query($main_table,$selects,$joins,$condtions,$groups_by,$orders,$limits,request()->all());
         $form=$this->repository->build_form($condtions,$addtional);
 

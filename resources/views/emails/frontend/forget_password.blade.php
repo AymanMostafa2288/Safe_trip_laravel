@@ -120,7 +120,7 @@ img.g-img + div {
     <style>
 
 	    .primary{
-	background: #ed8b00;
+	background: #fbca1b;
 }
 .bg_white{
 	background: #ffffff;
@@ -145,7 +145,7 @@ img.g-img + div {
 }
 .btn.btn-primary{
 	border-radius: 5px;
-	background: #ed8b00;
+	background: #fbca1b;
 	color: #ffffff;
 }
 .btn.btn-white{
@@ -187,7 +187,7 @@ body{
 }
 
 a{
-	color: #ed8b00;
+	color: #fbca1b;
 }
 
 table{
@@ -198,7 +198,7 @@ table{
 	margin: 0;
 }
 .logo h1 a{
-	color: #ed8b00;
+	color: #fbca1b;
 	font-size: 24px;
 	font-weight: 700;
 	font-family: 'Poppins', sans-serif;

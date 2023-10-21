@@ -80,6 +80,7 @@ class Worker extends Main
             $transaction['driving_license']  = $item->driver->driving_license;
         }
         if($item->type == WorkerTypeEnum::SUPERVISOR){
+
             $transaction['note'] = $item->supervisor->note;
         }
         return $transaction;

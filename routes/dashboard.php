@@ -19,7 +19,7 @@ Route::namespace('App\Http\Controllers\backend')->middleware('CheckAdminAuth')->
     Route::get('/lang/{file}', 'BaseController@one_lang')->name('dashboard_one_lang');
     Route::post('/lang/{file}/{slug}', 'BaseController@update_lang')->name('dashboard_update_lang');
 
-    Route::get('/clear_cash',function(){
+    Route::get('/clear_cash', function () {
 
         clearCash();
         redirect()->back();
@@ -35,7 +35,7 @@ Route::namespace('App\Http\Controllers\backend')->middleware('CheckAdminAuth')->
 
     Route::get('get_data_db_table', function () {
         $request = request()->all();
-        $data=getValueByTableName($request['table'], [$request['table_field']],[$request['where']=>$request['value']]);
+        $data = getValueByTableName($request['table'], [$request['table_field']], [$request['where'] => $request['value']]);
         return response()->json($data);
     });
 
@@ -91,7 +91,6 @@ Route::namespace('App\Http\Controllers\backend')->middleware('CheckAdminAuth')->
         Route::resource('branches', 'BranchesController', ['names' => 'branches']);
 
 
-
     });
 
     Route::prefix('tasks')->namespace('task_management')->group(function () {
@@ -101,7 +100,6 @@ Route::namespace('App\Http\Controllers\backend')->middleware('CheckAdminAuth')->
         Route::delete('boards/delete_all', 'BoardController@destroy_multi');
         Route::resource('boards', 'BoardController', ['names' => 'boards']);
     });
-
 
 
     Route::prefix('location')->name('location.')->namespace('locations_management')->group(function () {
@@ -140,46 +138,55 @@ Route::namespace('App\Http\Controllers\backend')->middleware('CheckAdminAuth')->
 
 //route dynamic here
 
-Route::delete('packages/delete_all', 'Packages\PackageController@destroy_multi');
-Route::post('packages/translate/{id}', 'Packages\PackageController@translate_store');
-Route::get('packages/translate/{id}', 'Packages\PackageController@translate')->name('packages.translate');
-Route::resource('packages', 'Packages\PackageController', ['names' => 'packages']);
+        Route::delete('subscriptions/delete_all', 'Subscriptions\SubscriptionController@destroy_multi');
+        Route::post('subscriptions/translate/{id}', 'Subscriptions\SubscriptionController@translate_store');
+        Route::get('subscriptions/translate/{id}', 'Subscriptions\SubscriptionController@translate')->name('subscriptions.translate');
+        Route::resource('subscriptions', 'Subscriptions\SubscriptionController', ['names' => 'subscriptions']);
 
-Route::delete('routes/delete_all', 'Routes\RouteController@destroy_multi');
-Route::post('routes/translate/{id}', 'Routes\RouteController@translate_store');
-Route::get('routes/translate/{id}', 'Routes\RouteController@translate')->name('routes.translate');
-Route::resource('routes', 'Routes\RouteController', ['names' => 'routes']);
+        Route::delete('trips/delete_all', 'Trips\TripController@destroy_multi');
+        Route::post('trips/translate/{id}', 'Trips\TripController@translate_store');
+        Route::get('trips/translate/{id}', 'Trips\TripController@translate')->name('trips.translate');
+        Route::resource('trips', 'Trips\TripController', ['names' => 'trips']);
 
-Route::delete('schools/delete_all', 'Schools\SchoolController@destroy_multi');
-Route::post('schools/translate/{id}', 'Schools\SchoolController@translate_store');
-Route::get('schools/translate/{id}', 'Schools\SchoolController@translate')->name('schools.translate');
-Route::resource('schools', 'Schools\SchoolController', ['names' => 'schools']);
+        Route::delete('packages/delete_all', 'Packages\PackageController@destroy_multi');
+        Route::post('packages/translate/{id}', 'Packages\PackageController@translate_store');
+        Route::get('packages/translate/{id}', 'Packages\PackageController@translate')->name('packages.translate');
+        Route::resource('packages', 'Packages\PackageController', ['names' => 'packages']);
 
-Route::delete('buses/delete_all', 'Buses\BusController@destroy_multi');
-Route::post('buses/translate/{id}', 'Buses\BusController@translate_store');
-Route::get('buses/translate/{id}', 'Buses\BusController@translate')->name('buses.translate');
-Route::resource('buses', 'Buses\BusController', ['names' => 'buses']);
+        Route::delete('routes/delete_all', 'Routes\RouteController@destroy_multi');
+        Route::post('routes/translate/{id}', 'Routes\RouteController@translate_store');
+        Route::get('routes/translate/{id}', 'Routes\RouteController@translate')->name('routes.translate');
+        Route::resource('routes', 'Routes\RouteController', ['names' => 'routes']);
 
-Route::delete('supervisors/delete_all', 'Supervisors\SupervisorController@destroy_multi');
-Route::post('supervisors/translate/{id}', 'Supervisors\SupervisorController@translate_store');
-Route::get('supervisors/translate/{id}', 'Supervisors\SupervisorController@translate')->name('supervisors.translate');
-Route::resource('supervisors', 'Supervisors\SupervisorController', ['names' => 'supervisors']);
+        Route::delete('schools/delete_all', 'Schools\SchoolController@destroy_multi');
+        Route::post('schools/translate/{id}', 'Schools\SchoolController@translate_store');
+        Route::get('schools/translate/{id}', 'Schools\SchoolController@translate')->name('schools.translate');
+        Route::resource('schools', 'Schools\SchoolController', ['names' => 'schools']);
 
-Route::delete('drivers/delete_all', 'Drivers\DriverController@destroy_multi');
-Route::post('drivers/translate/{id}', 'Drivers\DriverController@translate_store');
-Route::get('drivers/translate/{id}', 'Drivers\DriverController@translate')->name('drivers.translate');
-Route::resource('drivers', 'Drivers\DriverController', ['names' => 'drivers']);
+        Route::delete('buses/delete_all', 'Buses\BusController@destroy_multi');
+        Route::post('buses/translate/{id}', 'Buses\BusController@translate_store');
+        Route::get('buses/translate/{id}', 'Buses\BusController@translate')->name('buses.translate');
+        Route::resource('buses', 'Buses\BusController', ['names' => 'buses']);
 
-Route::delete('students/delete_all', 'Students\StudentController@destroy_multi');
-Route::post('students/translate/{id}', 'Students\StudentController@translate_store');
-Route::get('students/translate/{id}', 'Students\StudentController@translate')->name('students.translate');
-Route::resource('students', 'Students\StudentController', ['names' => 'students']);
+        Route::delete('supervisors/delete_all', 'Supervisors\SupervisorController@destroy_multi');
+        Route::post('supervisors/translate/{id}', 'Supervisors\SupervisorController@translate_store');
+        Route::get('supervisors/translate/{id}', 'Supervisors\SupervisorController@translate')->name('supervisors.translate');
+        Route::resource('supervisors', 'Supervisors\SupervisorController', ['names' => 'supervisors']);
 
-Route::delete('parents/delete_all', 'Parents\ParentController@destroy_multi');
-Route::post('parents/translate/{id}', 'Parents\ParentController@translate_store');
-Route::get('parents/translate/{id}', 'Parents\ParentController@translate')->name('parents.translate');
-Route::resource('parents', 'Parents\ParentController', ['names' => 'parents']);
+        Route::delete('drivers/delete_all', 'Drivers\DriverController@destroy_multi');
+        Route::post('drivers/translate/{id}', 'Drivers\DriverController@translate_store');
+        Route::get('drivers/translate/{id}', 'Drivers\DriverController@translate')->name('drivers.translate');
+        Route::resource('drivers', 'Drivers\DriverController', ['names' => 'drivers']);
 
+        Route::delete('students/delete_all', 'Students\StudentController@destroy_multi');
+        Route::post('students/translate/{id}', 'Students\StudentController@translate_store');
+        Route::get('students/translate/{id}', 'Students\StudentController@translate')->name('students.translate');
+        Route::resource('students', 'Students\StudentController', ['names' => 'students']);
+
+        Route::delete('parents/delete_all', 'Parents\ParentController@destroy_multi');
+        Route::post('parents/translate/{id}', 'Parents\ParentController@translate_store');
+        Route::get('parents/translate/{id}', 'Parents\ParentController@translate')->name('parents.translate');
+        Route::resource('parents', 'Parents\ParentController', ['names' => 'parents']);
 
 
 //End route dynamic

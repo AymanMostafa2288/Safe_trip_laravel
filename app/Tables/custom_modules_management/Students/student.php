@@ -71,7 +71,12 @@ function table_buttons($rows, $related_to = false)
     $rows["table"] = [];
     $rows["table"]["multi_select"] = true;
     $rows["table"]["add"] = (checkAdminPermission("insert", $module_id)) ? true : false;
-    $rows["table"]["add_link"] = route("students.create");
+
+    if(request()->family_id){
+        $rows["table"]["add_link"] = route("students.create").'?family_id='.request()->family_id;
+    }else{
+        $rows["table"]["add_link"] = route("students.create");
+    }
     if ($related_to != false) {
         $rows["table"]["add_link"] = route("students.create") . "?related_to=" . $related_to;
     }

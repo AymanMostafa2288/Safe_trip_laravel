@@ -36,6 +36,28 @@ function form($data = [])
             "options" =>  getValueByTableName("bus_schools", ["name_".getDashboardCurrantLanguage()], ["is_active" => ActiveStatusEnum::ACTIVE]),
             "selected" => (array_key_exists("school_id", $data)) ? $data["school_id"] : old("school_id")
         ],
+        "date_from" => [
+            "input_type" => "input",
+            "attributes"=>(empty($data)) ? ['readonly'=>true]:[],
+            "type" => "date",
+            "title" => "Start Date",
+            "name" => "date_from",
+            "placeholder" => "Start Date",
+            "class" => "",
+            "around_div" => "form-group form-md-line-input",
+            "value" => (array_key_exists("date_from", $data)) ? $data["date_from"] : old("date_from")
+        ],
+        "date_to" => [
+            "input_type" => "input",
+            "attributes"=>(empty($data)) ? ['readonly'=>true]:[],
+            "type" => "date",
+            "title" => "End Date",
+            "name" => "date_to",
+            "placeholder" => "End Date",
+            "class" => "",
+            "around_div" => "form-group form-md-line-input",
+            "value" => (array_key_exists("date_to", $data)) ? $data["date_to"] : old("date_to")
+        ],
         'active' => [
             'input_type'=>'select',
             'title'=>'Is Active ?',
@@ -65,32 +87,35 @@ function form($data = [])
             "name" => "location",
             "class" => "",
             "around_div" => "form-group form-md-line-input",
-            "value" => (array_key_exists("location", $data)) ? $data["location"] : old("location")
+            "value" => (array_key_exists("location_to", $data)) ? $data["location_to"] : old("location")
         ],
     ];
-    $fields["right_2"] = [
-        'fields'=> [
-            'folder'  =>'tracking',
-            'input_type'=>'multi_record',
-            'type'=>'route_sign',
-            'title'=>'Sign',
-            'name'=>'route_sign',
-            'options'=>form_options(),
-            'values'=>(array_key_exists('value',$data))?$data['value']['fields_record']:[],
-        ],
-    ];
+    if(empty($data)){
+        $fields["right_2"] = [
+            'fields'=> [
+                'folder'  =>'tracking',
+                'input_type'=>'multi_record',
+                'type'=>'route_sign',
+                'title'=>'Sign',
+                'name'=>'route_sign',
+                'options'=>form_options(),
+                'values'=>(array_key_exists('value',$data))?$data['value']['fields_record']:[],
+            ],
+        ];
+    }
+
     $fields["form_edit"] = false;
     if (!empty($data)) {
         $fields["form_edit"] = true;
         $fields["link_custom"] = "";
     }
-    $fields = form_buttons($fields);
+    $fields = form_buttons($fields,$data);
     $fields = (empty($data))?form_attributes($fields):form_attributes($fields, $data["id"]);
     $fields = form_design($fields);
     return $fields;
 }
 
-function form_buttons($fields)
+function form_buttons($fields,$data=[])
 {
     $module_id = 7;
     $fields["send_mail"] = false;
@@ -100,9 +125,25 @@ function form_buttons($fields)
     $fields["button_save_edit"] = (checkAdminPermission("insert", $module_id)) ? true : false;
     $fields["button_clear"] = false;
     if ($fields["form_edit"]) {
-        $fields["translate"] = (checkAdminPermission("translate", $module_id)) ? true : false;
         $fields["button_save"] = (checkAdminPermission("update", $module_id)) ? true : false;
         $fields["button_save_edit"] = (checkAdminPermission("update", $module_id)) ? true : false;
+        $fields["custom_buttons"] = true;
+        $fields['custom_buttons_tags'] = [
+            [
+                'type' => 'link',
+                'blank'=>true,
+                'href'=>route('packages.index').'?route_id='.$data['id'],
+                'color'=>'btn-primary',
+                'name'=>'Packages'
+            ],
+            [
+                'type' => 'link',
+                'blank'=>true,
+                'href'=>route('trips.index').'?route_id='.$data['id'],
+                'color'=>'btn-primary',
+                'name'=>'Trip'
+            ]
+        ];
     }
 
     return $fields;
@@ -115,7 +156,7 @@ function form_attributes($fields, $id = ""){
     $fields["method"] = "POST";
     $fields["class"] = "";
     $fields["id"] = $id;
-    $fields["right_count"] = 2;
+    $fields["right_count"] = ($id == "")  ? 2 : 1;
     $fields["left_count"] = 1;
     $fields["module_id"] = 7;
     $fields["left_corner"] = true;
@@ -129,8 +170,11 @@ function form_design($fields)
     $fields["icon_left_1"] = "icon-target";
     $fields["title_right_1"] = "Location";
     $fields["icon_right_1"] = "icon-target";
-    $fields["title_right_2"] = "Sign";
-    $fields["icon_right_2"] = "icon-target";
+    if(empty($data)){
+        $fields["title_right_2"] = "Sign";
+        $fields["icon_right_2"] = "icon-target";
+    }
+
 
     return $fields;
 }

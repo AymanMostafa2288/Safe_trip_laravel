@@ -219,28 +219,6 @@ function build_form($data,$wheres=[]){
                             $html .='<button type="button" class="btn default" style="margin-top: 5px;">'.appendToLanguage(getDashboardCurrantLanguage(),'globals','Clear').'</button>';
                         }
 
-                        if(array_key_exists('custom_buttons',$data)){
-                            if($data['custom_buttons']){
-                                foreach($data['custom_buttons_tags'] as $button){
-                                    if($button['type'] == 'submit' || $button['type'] == 'button'){
-                                        $html .='<button type="'.$button['type'].'" class="btn '.$button['color'].'" style="margin-top: 5px;">'.appendToLanguage(getDashboardCurrantLanguage(),'globals',$button['name']).'</button>';
-                                    }elseif($button['type'] == 'link'){
-                                        if(array_key_exists('blank',$button)){
-                                            if($button['blank']){
-                                                $html .='<a href="'.$button['href'].'" target="_blank" class="btn '.$button['color'].'" style="margin-top: 5px;">'.appendToLanguage(getDashboardCurrantLanguage(),'globals',$button['name']).'</a>';
-                                            }else{
-                                                $html .='<a href="'.$button['href'].'" class="btn '.$button['color'].'" style="margin-top: 5px;">'.appendToLanguage(getDashboardCurrantLanguage(),'globals',$button['name']).'</a>';
-                                            }
-
-                                        }else{
-                                            $html .='<a href="'.$button['href'].'"  class="btn '.$button['color'].'" style="margin-top: 5px;">'.appendToLanguage(getDashboardCurrantLanguage(),'globals',$button['name']).'</a>';
-                                        }
-
-                                    }
-
-                                }
-                            }
-                        }
                         if(array_key_exists('translate',$data) && $data['translate']){
                             $html .='<a href="'.$data["translate_href"].'" class="btn btn-primary" style="margin-top: 5px;">'.appendToLanguage(getDashboardCurrantLanguage(),'globals','Translate').'</a>';
                         }
@@ -270,6 +248,35 @@ function build_form($data,$wheres=[]){
 
                     $html .='</div>';
                 $html .='</div>';
+            $html .='</div>';
+
+            $html .='<div class="col-md-12">';
+            $html .=' <div class="portlet light">';
+            $html .=' <div class="portlet-body form" style="text-align: center;">';
+            if(array_key_exists('custom_buttons',$data)){
+                if($data['custom_buttons']){
+                    foreach($data['custom_buttons_tags'] as $button){
+                        if($button['type'] == 'submit' || $button['type'] == 'button'){
+                            $html .='<button type="'.$button['type'].'" class="btn '.$button['color'].'" style="margin-top: 5px;">'.appendToLanguage(getDashboardCurrantLanguage(),'globals',$button['name']).'</button>';
+                        }elseif($button['type'] == 'link'){
+                            if(array_key_exists('blank',$button)){
+                                if($button['blank']){
+                                    $html .='<a href="'.$button['href'].'" target="_blank" class="btn '.$button['color'].'" style="margin-top: 5px;">'.appendToLanguage(getDashboardCurrantLanguage(),'globals',$button['name']).'</a>';
+                                }else{
+                                    $html .='<a href="'.$button['href'].'" class="btn '.$button['color'].'" style="margin-top: 5px;">'.appendToLanguage(getDashboardCurrantLanguage(),'globals',$button['name']).'</a>';
+                                }
+
+                            }else{
+                                $html .='<a href="'.$button['href'].'"  class="btn '.$button['color'].'" style="margin-top: 5px;">'.appendToLanguage(getDashboardCurrantLanguage(),'globals',$button['name']).'</a>';
+                            }
+
+                        }
+
+                    }
+                }
+            }
+            $html .='</div>';
+            $html .='</div>';
             $html .='</div>';
         }
 

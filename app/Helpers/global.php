@@ -740,7 +740,23 @@ if(!function_exists('clearCash')){
    }
 }
 
+function date_range($first, $last, $step = '+1 day', $output_format = 'Y-m-d' , $without =[] ) {
 
+    $dates = array();
+    $current = strtotime($first);
+    $last = strtotime($last);
+
+    while( $current <= $last ) {
+
+        $date  = date('D', $current);
+        if(!in_array($date , $without)){
+            $dates[] = date($output_format, $current);
+        }
+        $current = strtotime($step, $current);
+    }
+
+    return $dates;
+}
 
 ////////////////// End Notification
 

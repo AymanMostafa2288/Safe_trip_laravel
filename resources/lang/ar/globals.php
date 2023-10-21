@@ -621,5 +621,6 @@ return[
 "School"=>"School",
 "Route"=>"Route",
 "Create Route"=>"Create Route",
+"Subscriptions"=>"Subscriptions",
 
 ];

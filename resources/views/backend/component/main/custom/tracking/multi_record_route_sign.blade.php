@@ -65,13 +65,13 @@
             @endphp
         @endforeach
     @else
-        <div class="panel panel-default element_fields_{{ $name }}" style="display:none" count="{{ $count }}">
+        <div class="panel panel-default element_fields_{{ $name }}"  count="{{ $count }}">
             <div class="panel-body" >
                 {!! viewComponents('select',[
                         'type'=>'text',
                         'name'=>$name.'[bus_id][]',
                         'repeater' => true,
-                        'validation_title' => $name.'_bus_id',
+                        'validation_title' => $name.'_bus_id_0',
                         'validation_num' => 0,
                         'title'=>'Bus',
                         'class'=>'',
@@ -85,7 +85,7 @@
                         'type'=>'text',
                         'name'=>$name.'[driver_id][]',
                         'repeater' => true,
-                        'validation_title' => $name.'_driver_id',
+                        'validation_title' => $name.'_driver_id_0',
                         'validation_num' => 0,
                         'title'=>'Worker',
                         'class'=>'',
@@ -99,7 +99,7 @@
                         'type'=>'text',
                         'name'=>$name.'[supervisor_id][]',
                         'repeater' => true,
-                        'validation_title' => $name.'_supervisor_id',
+                        'validation_title' => $name.'_supervisor_id_0',
                         'validation_num' => 0,
                         'title'=>'Supervisors',
                         'repeater' => true,
@@ -114,7 +114,7 @@
                         'type'=>'time',
                         'name'=>$name.'[go_start_time][]',
                         'repeater' => true,
-                        'validation_title' => $name.'_go_start_time',
+                        'validation_title' => $name.'_go_start_time_0',
                         'validation_num' => 0,
                         'title'=>'Go Trip Start At',
                         'class'=>'',
@@ -127,7 +127,7 @@
                         'type'=>'time',
                         'name'=>$name.'[go_end_time][]',
                         'repeater' => true,
-                        'validation_title' => $name.'_go_end_time',
+                        'validation_title' => $name.'_go_end_time_0',
                         'validation_num' => 0,
                         'title'=>'Go Trip End At',
                         'class'=>'',
@@ -140,7 +140,7 @@
                         'type'=>'time',
                         'name'=>$name.'[back_start_time][]',
                         'repeater' => true,
-                        'validation_title' => $name.'_back_start_time',
+                        'validation_title' => $name.'_back_start_time_0',
                         'validation_num' => 0,
                         'title'=>'Back Trip Start At',
                         'class'=>'',
@@ -153,7 +153,7 @@
                         'type'=>'time',
                         'name'=>$name.'[back_end_time][]',
                         'repeater' => true,
-                        'validation_title' => $name.'_back_end_time',
+                        'validation_title' => $name.'_back_end_time_0',
                         'validation_num' => 0,
                         'title'=>'Back Trip End At',
                         'class'=>'',

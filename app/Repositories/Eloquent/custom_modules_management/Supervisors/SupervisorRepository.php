@@ -121,7 +121,7 @@ class SupervisorRepository implements SupervisorInterface {
             $request['type'] = WorkerTypeEnum::SUPERVISOR;
             $data = $this->model->updateOrCreate( ["id" => $id],$request);
             if($data){
-                Driver::updateOrCreate([
+                Supervisor::updateOrCreate([
                     'worker_id' => $data->id
                 ],[
                     'note'            => $request['note'],
@@ -137,11 +137,15 @@ class SupervisorRepository implements SupervisorInterface {
     {
         try {
             $data = $this->model->find($id);
+
             if (!$data) {
                 return false;
             }
+
             foreach ($this->images as $image_name) {
+
                 $old_image = $this->data([], $id, $image_name);
+                dd($image_name);
                 deleteFileStorage($old_image);
             }
             foreach ($this->files as $file_name) {

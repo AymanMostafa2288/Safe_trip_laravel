@@ -20,10 +20,10 @@ return new class extends Migration
             $table->unsignedBigInteger('driver_id')->index('bus_trips_driver_id_foreign');
             $table->unsignedBigInteger('supervisor_id')->index('bus_trips_supervisor_id_foreign');
             $table->unsignedBigInteger('bus_id')->index('bus_trips_bus_id_foreign');
-            $table->unsignedBigInteger('trip_id')->index('bus_trips_trip_id_foreign')->nullable();
-            $table->dateTime('day');
-            $table->dateTime('time_start');
-            $table->dateTime('time_end');
+            $table->mediumText('trip_id');
+            $table->date('day');
+            $table->time('time_start');
+            $table->time('time_end');
             $table->dateTime('actual_time_start')->nullable();
             $table->dateTime('actual_time_end')->nullable();
             $table->string('status', 50)->default(TripStatusEnum::NOT_YET);

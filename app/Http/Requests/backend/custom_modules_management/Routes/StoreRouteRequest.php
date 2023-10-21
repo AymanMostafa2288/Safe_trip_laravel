@@ -23,7 +23,9 @@ class StoreRouteRequest extends FormRequest
             "name_ar"                      => "required",
             "name_en"                      => "required",
             "address_to"                   => "required",
-            "location_to"                  => "required",
+            "location"                  => "required",
+            "date_to"                      => "required",
+            "date_from"                    => "required",
             "is_active"                    => "required|".Rule::in(ActiveStatusEnum::options()),
             "route_sign"                   => "required|array",
             "route_sign.bus_id.*"          => "required|exists:bus_buses,id",
@@ -35,5 +37,6 @@ class StoreRouteRequest extends FormRequest
             "route_sign.back_end_time.*"   => "required|distinct",
         ];
     }
+
 
 }

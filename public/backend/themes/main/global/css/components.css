@@ -1,5 +1,5 @@
 /*********************************
- METRONIC SQUARE STYLE COMPONENTS 
+ METRONIC SQUARE STYLE COMPONENTS
 *********************************/
 /***
 Rounded corners reset
@@ -50,8 +50,8 @@ body {
 }
 
 /*
- Internet Explorer 10 doesn't differentiate device width from viewport width, and thus doesn't 
- properly apply the media queries in Bootstrap's CSS. To address this, 
+ Internet Explorer 10 doesn't differentiate device width from viewport width, and thus doesn't
+ properly apply the media queries in Bootstrap's CSS. To address this,
  you can optionally include the following CSS and JavaScript to work around this problem until Microsoft issues a fix.
 */
 @-webkit-viewport {
@@ -70,8 +70,8 @@ body {
   width: device-width;
 }
 /*
- Internet Explorer 10 doesn't differentiate device width from viewport width, 
- and thus doesn't properly apply the media queries in Bootstrap's CSS. To address this, following CSS code applied 
+ Internet Explorer 10 doesn't differentiate device width from viewport width,
+ and thus doesn't properly apply the media queries in Bootstrap's CSS. To address this, following CSS code applied
 */
 @-ms-viewport {
   width: auto !important;
@@ -286,14 +286,14 @@ body {
   visibility: visible;
   left: 0;
   width: 100%;
-  background: #ed8b00;
+  background: #fbca1b;
 }
 .form-group.form-md-line-input .form-control.edited:not([readonly]) ~ label, .form-group.form-md-line-input .form-control:focus:not([readonly]) ~ label, .form-group.form-md-line-input .form-control.focus:not([readonly]) ~ label {
   opacity: 1 ;
   filter: alpha(opacity=100) ;
 }
 .form-group.form-md-line-input .form-control.edited:not([readonly]) ~ .help-block, .form-group.form-md-line-input .form-control:focus:not([readonly]) ~ .help-block, .form-group.form-md-line-input .form-control.focus:not([readonly]) ~ .help-block {
-  color: #ed8b00;
+  color: #fbca1b;
   opacity: 1 ;
   filter: alpha(opacity=100) ;
 }
@@ -588,7 +588,7 @@ body {
   left: 6px;
   width: 10px;
   height: 20px;
-  border: 2px solid #ed8b00;
+  border: 2px solid #fbca1b;
   border-top: none;
   border-left: none;
   opacity: 0;
@@ -654,13 +654,13 @@ body {
   border-color: #89C4F4;
 }
 .md-checkbox.has-success label {
-  color: #ed8b00;
+  color: #fbca1b;
 }
 .md-checkbox.has-success label > .box {
-  border-color: #ed8b00;
+  border-color: #fbca1b;
 }
 .md-checkbox.has-success label > .check {
-  border-color: #ed8b00;
+  border-color: #fbca1b;
 }
 .md-checkbox.has-warning label {
   color: #dfba49;
@@ -685,7 +685,7 @@ body {
   color: #89C4F4;
 }
 .form-md-checkboxes.has-success > label {
-  color: #ed8b00;
+  color: #fbca1b;
 }
 .form-md-checkboxes.has-warning > label {
   color: #dfba49;
@@ -794,7 +794,7 @@ body {
   left: 5px;
   width: 10px;
   height: 10px;
-  background: #ed8b00;
+  background: #fbca1b;
   opacity: 0;
   z-index: 6;
   border-radius: 50% !important;
@@ -852,13 +852,13 @@ body {
   background: #89C4F4;
 }
 .md-radio.has-success label {
-  color: #ed8b00;
+  color: #fbca1b;
 }
 .md-radio.has-success label > .box {
-  border-color: #ed8b00;
+  border-color: #fbca1b;
 }
 .md-radio.has-success label > .check {
-  background: #ed8b00;
+  background: #fbca1b;
 }
 .md-radio.has-warning label {
   color: #dfba49;
@@ -883,7 +883,7 @@ body {
   color: #89C4F4;
 }
 .form-md-radios.has-success > label {
-  color: #ed8b00;
+  color: #fbca1b;
 }
 .form-md-radios.has-warning > label {
   color: #dfba49;
@@ -1308,7 +1308,7 @@ Users
 }
 
 /***
-Top News Blocks(new in v1.2.2) 
+Top News Blocks(new in v1.2.2)
 ***/
 .top-news {
   color: #fff;
@@ -1696,7 +1696,7 @@ li [class*=" icon-"].icon-large {
 }
 
 .icon-state-success {
-  color: #ed8b00;
+  color: #fbca1b;
 }
 
 .icon-state-info {
@@ -1756,7 +1756,7 @@ Simple Line Icons Demo
     width: 33.333%;
   }
 }
-/*** 
+/***
 Glyphicons Demo
 ***/
 .glyphicons-demo ul {
@@ -1914,7 +1914,7 @@ Custom Bootstrap Badges
 }
 
 .badge-success {
-  background-color: #ed8b00;
+  background-color: #fbca1b;
   background-image: none;
 }
 
@@ -2079,7 +2079,7 @@ Customized Bootstrap Buttons
 
 .btn-success {
   color: #fff;
-  background-color: #ed8b00;
+  background-color: #fbca1b;
   border-color: #3ea49d;
 }
 .btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active {
@@ -2103,11 +2103,11 @@ Customized Bootstrap Buttons
   background-image: none;
 }
 .btn-success.disabled, .btn-success.disabled:hover, .btn-success.disabled:focus, .btn-success.disabled:active, .btn-success.disabled.active, .btn-success[disabled], .btn-success[disabled]:hover, .btn-success[disabled]:focus, .btn-success[disabled]:active, .btn-success[disabled].active, fieldset[disabled] .btn-success, fieldset[disabled] .btn-success:hover, fieldset[disabled] .btn-success:focus, fieldset[disabled] .btn-success:active, fieldset[disabled] .btn-success.active {
-  background-color: #ed8b00;
+  background-color: #fbca1b;
   border-color: #3ea49d;
 }
 .btn-success .badge {
-  color: #ed8b00;
+  color: #fbca1b;
   background-color: #fff;
 }
 
@@ -2586,7 +2586,7 @@ Chats
 }
 
 /***
-Customized Bootstrap Close Icon 
+Customized Bootstrap Close Icon
 ***/
 .close {
   display: inline-block;
@@ -3616,7 +3616,7 @@ Input icons
   z-index: 10055;
 }
 .has-success .input-icon > i {
-  color: #ed8b00;
+  color: #fbca1b;
 }
 .has-warning .input-icon > i {
   color: #dfba49;
@@ -3685,7 +3685,7 @@ h1 .label, h2 .label, h3 .label, h4 .label, h5 .label, h6 .label {
 }
 
 .label-success {
-  background-color: #ed8b00;
+  background-color: #fbca1b;
 }
 .label-success[href]:hover, .label-success[href]:focus {
   background-color: #37918b;
@@ -3740,7 +3740,7 @@ Text states
 }
 
 .text-success {
-  color: #ed8b00;
+  color: #fbca1b;
 }
 
 .text-info {
@@ -4061,7 +4061,7 @@ Metro icons
 }
 
 /***
-Customized Bootstrap Modal 
+Customized Bootstrap Modal
 ***/
 .modal {
   z-index: 10050;
@@ -4436,7 +4436,7 @@ name .popover .popover-content,
 .popover.name .popover-title,
 name .popover .popover-content,
 .popover.name .popover-content {
-  color: #ed8b00;
+  color: #fbca1b;
 }
 
 .popover.name .popover-title,
@@ -4929,7 +4929,7 @@ Customized Progress Bars
 }
 
 .progress > .progress-bar-success {
-  background-color: #ed8b00;
+  background-color: #fbca1b;
 }
 .progress-striped .progress > .progress-bar-success {
   background-image: none;
@@ -5810,7 +5810,7 @@ Custom tables
 }
 
 .table-advance td.highlight div.success {
-  border-left: 2px solid #ed8b00;
+  border-left: 2px solid #fbca1b;
 }
 
 .table-advance td.highlight div.info {
@@ -5880,7 +5880,7 @@ Light Table
 }
 
 /***
-Customized Bootstrap Tabs 
+Customized Bootstrap Tabs
 ***/
 /* Tabs and pills */
 .nav-tabs,
@@ -8746,7 +8746,7 @@ Green Sharp
 /* Button */
 .green-sharp.btn {
   color: #FFFFFF;
-  background-color: #ed8b00;
+  background-color: #fbca1b;
 }
 .green-sharp.btn:hover, .green-sharp.btn:focus, .green-sharp.btn:active, .green-sharp.btn.active {
   color: #FFFFFF;
@@ -8767,22 +8767,22 @@ Green Sharp
   background-image: none;
 }
 .green-sharp.btn.disabled, .green-sharp.btn.disabled:hover, .green-sharp.btn.disabled:focus, .green-sharp.btn.disabled:active, .green-sharp.btn.disabled.active, .green-sharp.btn[disabled], .green-sharp.btn[disabled]:hover, .green-sharp.btn[disabled]:focus, .green-sharp.btn[disabled]:active, .green-sharp.btn[disabled].active, fieldset[disabled] .green-sharp.btn, fieldset[disabled] .green-sharp.btn:hover, fieldset[disabled] .green-sharp.btn:focus, fieldset[disabled] .green-sharp.btn:active, fieldset[disabled] .green-sharp.btn.active {
-  background-color: #ed8b00;
+  background-color: #fbca1b;
 }
 .green-sharp.btn .badge {
-  color: #ed8b00;
+  color: #fbca1b;
   background-color: #FFFFFF;
 }
 
 /* Button Strip */
 .btn.green-sharp-stripe {
-  border-left: 3px solid #ed8b00;
+  border-left: 3px solid #fbca1b;
 }
 
 /* Portlet */
 .portlet > .portlet-body.green-sharp,
 .portlet.green-sharp {
-  background-color: #ed8b00;
+  background-color: #fbca1b;
 }
 
 .portlet.solid.green-sharp > .portlet-title,
@@ -8820,7 +8820,7 @@ Green Sharp
   border-top: 0;
 }
 .portlet.box.green-sharp > .portlet-title {
-  background-color: #ed8b00;
+  background-color: #fbca1b;
 }
 .portlet.box.green-sharp > .portlet-title > .caption {
   color: #FFFFFF;
@@ -8844,7 +8844,7 @@ Green Sharp
 
 /* Statistic Block */
 .dashboard-stat.green-sharp {
-  background-color: #ed8b00;
+  background-color: #fbca1b;
 }
 .dashboard-stat.green-sharp.dashboard-stat-light:hover {
   background-color: #46a595;
@@ -8869,19 +8869,19 @@ Green Sharp
 
 /* General Element */
 .bg-green-sharp {
-  border-color: #ed8b00 !important;
+  border-color: #fbca1b !important;
   background-image: none !important;
-  background-color: #ed8b00 !important;
+  background-color: #fbca1b !important;
   color: #FFFFFF !important;
 }
 
 /* General Text & Icon Font Colors */
 .font-green-sharp {
-  color: #ed8b00 !important;
+  color: #fbca1b !important;
 }
 
 .progress-bar.green-sharp {
-  background: #ed8b00 !important;
+  background: #fbca1b !important;
   color: #FFFFFF !important;
 }
 

@@ -144,7 +144,7 @@
                                     $data['body_length']=40;
                                 }
                                 foreach($data['body'] as $body){
-                                    $html .='<tr class="odd gradeX">';
+                                    $html .='<tr class="odd gradeX" style="text-align: center">';
 
                                         if($data['table']['multi_select']==true){
                                             $html .='<td style="text-align:center">';

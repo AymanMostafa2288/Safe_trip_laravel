@@ -557,6 +557,7 @@ if(!function_exists('getValueByTableName')){
             $select_db[]=$value;
         }
         $query=DB::table($table_name)->select($select_db);
+
         if(!empty($joins)){
             if(is_array($joins[0])){
                 foreach($joins as $join){
@@ -884,6 +885,7 @@ if(!function_exists('counterData')){
         }
 
         $request['select']=['name','statement','prams_counters','type','icon','ordered'];
+
         $counters=app(CounterInterface::class)->data($request);
 
         $return=[];
@@ -891,15 +893,18 @@ if(!function_exists('counterData')){
         $params=[];
 
         foreach($counters as $counter){
+
             $element=[];
             $sql=$counter->statement;
             $param=json_decode($counter->prams_counters,true);
+
             if($param['fields_type'][0]=='get_param'){
                 if(array_key_exists($param['value'][0],$_GET)){
                     $param=[$_GET[$param['value'][0]]];
                 }else{
                     continue;
                 }
+
             }else{
                 if($param['order'][0]==null){
                     $param=[];
@@ -907,6 +912,7 @@ if(!function_exists('counterData')){
             }
             $sql_arr=explode('counter',$sql);
             $sql=$sql_arr[0].' counter, "'.$counter->name.'" as type '. $sql_arr[1];
+
             $sqls[]=$sql;
 
             $params=array_merge($params,$param);
@@ -922,6 +928,7 @@ if(!function_exists('counterData')){
         if(!empty($sqls)){
             $sqls=implode(' Union ',$sqls);
             $numbers = DB::select($sqls, $params);
+
             foreach($numbers as $key=>$value){
                 $value->counter;
                 if(array_key_exists($key,$return)){

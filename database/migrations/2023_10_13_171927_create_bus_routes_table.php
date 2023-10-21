@@ -22,6 +22,8 @@ return new class extends Migration
             $table->mediumText('address_to');
             $table->mediumText('location_from');
             $table->mediumText('location_to');
+            $table->date('date_from');
+            $table->date('date_to');
             $table->integer('is_active')->default(1);
             $table->timestamps();
             $table->softDeletes();

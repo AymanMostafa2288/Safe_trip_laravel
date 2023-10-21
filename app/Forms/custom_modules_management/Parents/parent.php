@@ -57,13 +57,13 @@ function form($data = []){
         $fields["form_edit"]=true;
         $fields["link_custom"]="";
     }
-    $fields = form_buttons($fields);
+    $fields = form_buttons($fields,$data);
     $fields = (empty($data)) ? form_attributes($fields):form_attributes($fields,$data["id"]);
     $fields = form_design($fields);
     return $fields;
 }
 
-function form_buttons($fields){
+function form_buttons($fields,$data){
 
     $module_id=1;
     $fields["button_save"]      = true;
@@ -71,12 +71,37 @@ function form_buttons($fields){
     $fields["send_mail"]        = false;
     $fields["button_clear"]     = false;
     $fields["translate"]        = false;
+    $fields["custom_buttons"]   = false;
     if ($fields["form_edit"]) {
-        $fields["custom_buttons"]   = false;
         $fields["button_save"]      = (checkAdminPermission("update",$module_id))?true:false;
         $fields["button_save_edit"] = (checkAdminPermission("update",$module_id))?true:false;
+        $fields["custom_buttons"]   = true;
+        $fields['custom_buttons_tags'] = [
+            [
+                'type' => 'link',
+                'blank'=>true,
+                'href'=> route('students.index').'?family_id='.$data['id'],
+                'color'=>'btn-primary',
+                'name'=>'Students'
+            ],
+            [
+                'type' => 'link',
+                'blank'=>true,
+                'href'=>route('subscriptions.index').'?family_id='.$data['id'],
+                'color'=>'btn-primary',
+                'name'=>'Subscription'
+            ],
+            [
+                'type' => 'link',
+                'blank'=>true,
+                'href'=>url('dashboard/reports/single/1').'?family_id='.$data['id'],
+                'color'=>'btn-danger',
+                'name'=>'Wallet'
+            ]
+        ];
+
     } else {
-        $fields["custom_buttons"]   = false;
+
         $fields["button_save"]      = (checkAdminPermission("insert",$module_id))?true:false;
         $fields["button_save_edit"] = (checkAdminPermission("insert",$module_id))?true:false;
     }

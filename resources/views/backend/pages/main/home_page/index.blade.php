@@ -181,7 +181,7 @@
                                             @foreach($table['body'] as $body)
                                                 <tr>
                                                     @foreach($table['head'] as $head)
-                                                        <td style="text-align: center;">{{ $body->$head }}</td>
+                                                        <td style="text-align: center;"><h5 style="font-weight: 900;font-size: 15px;">{{ $body->$head }}</h5></td>
                                                     @endforeach
                                                 </tr>
                                             @endforeach
@@ -231,7 +231,7 @@
                                             @foreach($table['body'] as $body)
                                                 <tr>
                                                     @foreach($table['head'] as $head)
-                                                        <td style="text-align: center;">{{ $body->$head }}</td>
+                                                        <td style="text-align: center;"><h5 style="font-weight: 900;font-size: 15px;">{{ $body->$head }}</h5></td>
                                                     @endforeach
                                                 </tr>
                                             @endforeach

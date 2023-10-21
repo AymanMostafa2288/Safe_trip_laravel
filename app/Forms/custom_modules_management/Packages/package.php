@@ -1,4 +1,5 @@
 <?php
+use App\Enum\ActiveStatusEnum;
 function form($data = [])
 {
     $fields = [];
@@ -11,8 +12,6 @@ function form($data = [])
             "placeholder" => "Name (Arabic)",
             "class" => "",
             "around_div" => "form-group form-md-line-input",
-
-
             "value" => (array_key_exists("name_ar", $data)) ? $data["name_ar"] : old("name_ar")
         ],
 
@@ -24,10 +23,9 @@ function form($data = [])
             "placeholder" => "Name (English)",
             "class" => "",
             "around_div" => "form-group form-md-line-input",
-
-
             "value" => (array_key_exists("name_en", $data)) ? $data["name_en"] : old("name_en")
         ],
+
         "route_id" => [
             "input_type" => "select",
             "type" => "select_search",
@@ -36,9 +34,7 @@ function form($data = [])
             "placeholder" => "Route",
             "class" => "select2_category",
             "around_div" => "form-group form-md-line-input",
-
-
-            "options" => [],
+            "options" => getValueByTableName("bus_routes", ["name_".getDashboardCurrantLanguage()], ["is_active" => ActiveStatusEnum::ACTIVE]),
             "selected" => (array_key_exists("route_id", $data)) ? $data["route_id"] : old("route_id")
         ],
 
@@ -50,8 +46,6 @@ function form($data = [])
             "placeholder" => "Count Of Trips",
             "class" => "",
             "around_div" => "form-group form-md-line-input",
-
-
             "value" => (array_key_exists("count_of_trip", $data)) ? $data["count_of_trip"] : old("count_of_trip")
         ],
 
@@ -60,14 +54,27 @@ function form($data = [])
             "type" => "number",
             "title" => "Price",
             "name" => "price",
+            "decimal" => true,
             "placeholder" => "Price",
             "class" => "",
             "around_div" => "form-group form-md-line-input",
-
-
             "value" => (array_key_exists("price", $data)) ? $data["price"] : old("price")
         ],
+        'active'=>[
+            'input_type'=>'select',
+            'title'=>'Is Active ?',
+            'name'=>'is_active',
+            'placeholder'=>'',
+            'class'=>'select2_category',
+            'around_div'=>'form-group form-md-line-input',
+            'below_div'=>'',
+            'options'=> ActiveStatusEnum::options(reverse:true),
+            'selected'=>(array_key_exists('is_active',$data))?$data['is_active']:1
+        ],
     ];
+    if(request()->route_id){
+        unset($fields["left_1"]['route_id']);
+    }
     $fields["right_1"] = ["note_ar" => [
         "input_type" => "textarea",
         "attributes" => ["rows" => 4],
@@ -77,8 +84,6 @@ function form($data = [])
         "placeholder" => "Note (Arabic)",
         "class" => "",
         "around_div" => "form-group form-md-line-input",
-
-
         "value" => (array_key_exists("note_ar", $data)) ? $data["note_ar"] : old("note_ar")
     ],
         "note_en" => [
@@ -90,8 +95,6 @@ function form($data = [])
             "placeholder" => "Note (English)",
             "class" => "",
             "around_div" => "form-group form-md-line-input",
-
-
             "value" => (array_key_exists("note_en", $data)) ? $data["note_en"] : old("note_en")
         ],
     ];
@@ -100,7 +103,7 @@ function form($data = [])
         $fields["form_edit"] = true;
         $fields["link_custom"] = "";
     }
-    $fields = form_buttons($fields);
+    $fields = form_buttons($fields,$data);
     if (empty($data)) {
         $fields = form_attributes($fields);
     } else {
@@ -112,21 +115,27 @@ function form($data = [])
     return $fields;
 }
 
-function form_buttons($fields)
+function form_buttons($fields,$data)
 {
     $module_id = 8;
-    $fields["button_save"] = true;
-    $fields["button_save_edit"] = true;
     $fields["send_mail"] = false;
     $fields["button_clear"] = false;
+    $fields["translate"] = false;
+    $fields["custom_buttons"] = false;
     if ($fields["form_edit"]) {
-        $fields["custom_buttons"] = false;
-        $fields["translate"] = (checkAdminPermission("translate", $module_id)) ? true : false;
+        $fields["custom_buttons"] = true;
+        $fields['custom_buttons_tags'] = [
+            [
+                'type' => 'link',
+                'blank'=>true,
+                'href'=>route('subscriptions.index').'?package_id='.$data['id'],
+                'color'=>'btn-primary',
+                'name'=>'Subscription'
+            ]
+        ];
         $fields["button_save"] = (checkAdminPermission("update", $module_id)) ? true : false;
         $fields["button_save_edit"] = (checkAdminPermission("update", $module_id)) ? true : false;
     } else {
-        $fields["custom_buttons"] = false;
-        $fields["translate"] = false;
         $fields["button_save"] = (checkAdminPermission("insert", $module_id)) ? true : false;
         $fields["button_save_edit"] = (checkAdminPermission("insert", $module_id)) ? true : false;
     }
@@ -135,11 +144,7 @@ function form_buttons($fields)
 
 function form_attributes($fields, $id = "")
 {
-    if ($id == "") {
-        $fields["action"] = route("packages.store");
-    } else {
-        $fields["action"] = route("packages.update", $id);
-    }
+    $fields["action"] = ($id == "") ? route("packages.store") : route("packages.update", $id);
     $fields["translate_href"] = url("dashboard/modules/packages/translate/" . $id);
     $fields["method"] = "POST";
     $fields["class"] = "";
@@ -149,6 +154,9 @@ function form_attributes($fields, $id = "")
     $fields["module_id"] = 8;
     $fields["left_corner"] = true;
     $fields["show_button"] = true;
+    if(request()->route_id){
+        $fields['hidden_inputs']=['route_id'=>request()->route_id];
+    }
     return $fields;
 }
 

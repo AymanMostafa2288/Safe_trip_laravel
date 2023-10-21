@@ -1,5 +1,5 @@
 /******************************
- 3RD PARTY PLUGIN CUSTOMIZATION 
+ 3RD PARTY PLUGIN CUSTOMIZATION
 ******************************/
 /***
 Bootstrap Colorpicker
@@ -399,7 +399,7 @@ Bootstrap Select
 }
 
 /***
-Bootstrap Switch 
+Bootstrap Switch
 ***/
 .bootstrap-switch {
   border-color: #e5e5e5;
@@ -427,7 +427,7 @@ Color variants
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-success,
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-success {
   color: #fff;
-  background: #ed8b00;
+  background: #fbca1b;
 }
 
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-warning,
@@ -584,7 +584,7 @@ Bootstrap Wizard
   display: none;
 }
 .form-wizard .steps > li.active > a.step .number {
-  background-color: #ed8b00;
+  background-color: #fbca1b;
   color: #fff;
 }
 .form-wizard .steps > li.active > a.step .desc {
@@ -1363,7 +1363,7 @@ Fullcalendar
 }
 .portlet.calendar.light .fc-button.fc-state-active, .portlet.calendar.light .fc-button.fc-state-hover {
   color: #333;
-  border-bottom: 2px solid #ed8b00;
+  border-bottom: 2px solid #fbca1b;
 }
 .portlet.calendar.light .fc-button.fc-state-disabled {
   color: #aaa;
@@ -1901,7 +1901,7 @@ Color variants
 
 .noUi-success.noUi-connect,
 .noUi-success .noUi-connect {
-  background: #ed8b00;
+  background: #fbca1b;
 }
 
 .noUi-warning.noUi-connect,

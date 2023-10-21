@@ -19,11 +19,13 @@ let errorMessage=function(message){
 // <i class="fa fa-exclamation-triangle"></i></span> asdasdas
 
 let validateMessage = function(messages){
+
     $.each( messages, function( index, value ){
         if(index.includes(".")){
             var split_string = index.split(".");
             index = split_string.join('_');
         }
+
         $('#'+index+'_validation').html('<i class="fa fa-exclamation-triangle"></i></span> '+value[0]);
 
     });

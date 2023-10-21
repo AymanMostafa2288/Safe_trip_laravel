@@ -60,6 +60,9 @@ function form($data = [])
             'selected'=>(array_key_exists('is_active',$data))?$data['is_active']:1
         ],
     ];
+    if(request()->family_id){
+        unset($fields["left_1"]['family_id']);
+    }
     $fields["right_1"] = [
         "phone" => [
             "input_type" => "input",
@@ -138,6 +141,7 @@ function form_buttons($fields)
 function form_attributes($fields, $id = "")
 {
     if ($id == "") {
+
         $fields["action"] = route("students.store");
     } else {
         $fields["action"] = route("students.update", $id);
@@ -151,6 +155,9 @@ function form_attributes($fields, $id = "")
     $fields["module_id"] = 2;
     $fields["left_corner"] = true;
     $fields["show_button"] = true;
+    if(request()->family_id){
+        $fields['hidden_inputs']=['family_id'=>request()->family_id];
+    }
     return $fields;
 }
 
